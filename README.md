@@ -1,15 +1,8 @@
-Welcome to your new dbt project!
+I believe airbyte needs the transformations at the root of the repository.
 
-### Using the starter project
+This is a repository to test this using the use case of "how many people are currently working at somenergia?"
 
-Try running the following commands:
-- dbt run
-- dbt test
+There's a weekly incremental deduped+history airbyte task which syncs hr_employee, hr_department and hr_employee_calendar between odoo and data warehouse and then applies the model to materialize the filtered list of active employees.
 
+this is a test to see if everything works as expected. The best would be to find out how to use somenergia-kpis/dbt_kpis or the rellevant transformation repository
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
