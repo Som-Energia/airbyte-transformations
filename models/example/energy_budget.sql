@@ -9,16 +9,9 @@
 
 {{ config(materialized='table') }}
 
-with source_data as (
-
-    select 1 as id
-    union all
-    select null as id
-
-)
-
-select *
-from source_data
+select *, -buy.demand*price.price as budget
+from {{ ref('sandbox', 'omie_energy_buy')}} as buy
+left join {{ ref('sandbox', 'omie_price_hour')}} as price on buy.date = price.date
 
 /*
     Uncomment the line below to remove records with null `id` values

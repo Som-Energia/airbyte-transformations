@@ -1,21 +1,14 @@
 
 version: 2
 
-models:
-  - name: my_first_dbt_model
-    description: "A starter dbt model"
-    columns:
-      - name: id
-        description: "The primary key for this table"
-        tests:
-          - unique
-          - not_null
+source:
+  - name: sandbox
+    schema: public
+    tables:
+      - name: omie_energy_buy
+      - name: omie_price_hour
 
-  - name: my_second_dbt_model
-    description: "A starter dbt model"
-    columns:
-      - name: id
-        description: "The primary key for this table"
-        tests:
-          - unique
-          - not_null
+
+models:
+  - name: energy_budget
+    description: "energy demand times price"
