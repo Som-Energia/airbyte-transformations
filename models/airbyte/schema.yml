@@ -2,13 +2,14 @@
 version: 2
 
 sources:
-  - name: sandbox
+  - name: odoo
     schema: public
     tables:
-      - name: omie_energy_buy
-      - name: omie_price_hour
+      - name: airbyte_odoo_hr_employee
+      - name: airbyte_odoo_hr_department
+      - name: airbyte_odoo_hr_employee_calendar
 
 
 models:
-  - name: energy_budget
-    description: "energy demand times price"
+  - name: active_employees
+    description: "list all employees active and with an active contract calendar interval"
